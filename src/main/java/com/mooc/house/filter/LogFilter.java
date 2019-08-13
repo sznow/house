@@ -1,30 +1,32 @@
-package com.mooc.house.filter;
+package com.mooc.house.web.filter;
 
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.*;
-import java.io.IOException;
-
-/**
- * 引入内嵌的servlet容器
- */
 public class LogFilter implements Filter {
     private Logger logger = LoggerFactory.getLogger(LogFilter.class);
-    @Override
+
     public void init(FilterConfig filterConfig) throws ServletException {
 
     }
 
-    @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-            logger.info("Request--coming");
-            filterChain.doFilter(servletRequest,servletResponse);
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+        logger.info("Request--coming");
+        chain.doFilter(request, response);
     }
 
-    @Override
     public void destroy() {
 
     }
+
 }
