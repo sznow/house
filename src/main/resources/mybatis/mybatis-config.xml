@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
     <settings>
         <!-- 配置关闭缓存  -->
         <setting name="cacheEnabled" value="false"/>
@@ -12,12 +13,12 @@
         <!-- 事务超时时间 -->
         <setting name="defaultStatementTimeout" value="600"/>
     </settings>
-
-    <typeAliases>
+<!--xml配置实体类与xml依赖-->
+   <!-- <typeAliases>
         <typeAlias type="com.mooc.house.common.model.User"></typeAlias>
     </typeAliases>
 
     <mappers>
         <mapper resource="mapper/user.xml"/>
-    </mappers>
+    </mappers>-->
 </configuration>
