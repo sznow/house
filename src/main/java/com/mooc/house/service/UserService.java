@@ -7,14 +7,15 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserService {
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
-    public List<User> getUsers(){
+    public List<Map<String,Object>> getUsers(){
         return userMapper.selectUsers();
     }
 }

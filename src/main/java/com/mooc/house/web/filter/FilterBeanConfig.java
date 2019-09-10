@@ -16,13 +16,13 @@ public class FilterBeanConfig {
 	 * 3.利用FilterRegistrationBean进行包装
 	 * @return
 	 */
-	@Bean
-	public FilterRegistrationBean logFilter(){
-		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-		filterRegistrationBean.setFilter(new LogFilter());
-		List<String> urList = new ArrayList<String>();
-		urList.add("*");
-		filterRegistrationBean.setUrlPatterns(urList);
-		return filterRegistrationBean;
-	}
+//	@Bean
+//	public FilterRegistrationBean logFilter(){
+//		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+//		filterRegistrationBean.setFilter(new LogFilter());
+//		List<String> urList = new ArrayList<String>();
+//		urList.add("*");
+//		filterRegistrationBean.setUrlPatterns(urList);
+//		return filterRegistrationBean;
+//	}
 }
